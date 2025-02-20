@@ -1,0 +1,12 @@
+LinkedList Vs ArrayDeque
+
+Which one to choose?
+    1. If you need a queue that will grow and shrink dynamically and you mainly perform insertions and deletions at both ends
+        of the queue, ArrayDeque might be a better choice due to its better performance characteristics.
+    2. If you need to frequently access elements by index or if you're dealing with a small number of elements, LinkedList might be suitable.
+
+2. A Red-Black Tree is a type of self-balancing binary search tree. It maintains a balance between the depth of its left
+and right subtrees to ensure efficient insertion, deletion, and search operations, with guaranteed O(log n) time
+complexity for these operations.
+
+

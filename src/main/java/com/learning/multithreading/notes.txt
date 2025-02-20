@@ -1,0 +1,38 @@
+Deadlock Prevention Strategies:
+
+1. Lock Ordering:
+   - Always acquire locks in a consistent and predictable order.
+   - Ensure all threads follow the same order when acquiring multiple locks.
+   - Prevents circular wait condition.
+
+2. Lock Timeout:
+   - Set a timeout for acquiring locks.
+   - If a thread cannot acquire a lock within the timeout period, it releases all locks and retries later.
+   - Prevents threads from waiting indefinitely and causing deadlock.
+
+3. Avoid Nested Locks:
+   - Minimize or avoid acquiring multiple locks within a critical section.
+   - If nested locks are necessary, ensure outer locks are acquired before inner locks.
+
+4. Lock Hierarchy:
+   - Establish a lock hierarchy and ensure threads acquire locks in ascending order according to the hierarchy.
+   - Enforces a global lock acquisition order, preventing deadlock.
+
+5. Use Reentrant Locks:
+   - Reentrant locks provide features like fairness and try-lock.
+   - Can help prevent deadlock situations.
+
+6. Deadlock Detection:
+   - Implement deadlock detection mechanisms.
+   - Techniques such as resource allocation graph and cycle detection algorithms can be employed.
+
+7. Avoid Blocking Operations:
+   - Minimize time spent holding locks, especially during I/O operations or accessing shared resources.
+   - Reduces contention and likelihood of deadlock.
+
+8. Keep Critical Sections Small:
+   - Reduce the amount of code within critical sections.
+   - Break down complex operations into smaller units to reduce the risk of deadlock.
+
+
+------------------------------------------------------------------------------------------------------------------------
